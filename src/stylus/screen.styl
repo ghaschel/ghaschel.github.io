@@ -1,0 +1,121 @@
+@import jeet
+
+//edit()
+
+@require 'includes-lib'
+@require 'includes-project'
+// @require 'keyframes'
+
+fz()
+	height 100%
+	width 100%
+
+html
+	height 100%
+
+	body
+		background $black3
+		background -moz-radial-gradient(center, ellipse cover,  $black3 0, $black2 47%, $black 100%)
+		background -webkit-radial-gradient(center, ellipse cover,  $black3 0, $black2 47%, $black 100%)
+		background radial-gradient(ellipse at center,  $black3 0, $black2 47%, $black 100%)
+		filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='" + $black3 + "', endColorstr='" + $black + "',GradientType=1 )")
+		height 100%
+		main
+			height 100%
+		#header
+			position absolute
+			top 0
+			left 0
+			right 0
+			width 100%
+			z-index 9999
+			padding-y(10px)
+			.row
+				text-align center
+			.fa-flask
+				color $white
+				float left
+				transition(0.3s, ease, all)
+				font-size 22pt
+				cursor pointer
+				margin-top 5px
+				&:hover
+					color $green
+					transform rotateZ(15deg)
+			.logo
+				float left
+				display inline-block
+				background-image url('../img/logo.png')
+				background-repeat no-repeat
+				background-position 100% 100%
+				background-size cover
+				position relative
+				width 29px
+				height 33px
+				// &:before
+				// 	content ''
+				// 	display inline-block
+				// 	-webkit-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.75);
+				// 	-moz-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.75);
+				// 	box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.75);
+			span
+				color $white
+				font-family 'Sketch Fine Serif'
+				font-size 26pt
+				font-weight normal
+				font-style normal
+			.contact
+				font-size 22pt
+				color $white
+				float right
+				i
+					display inline-block
+		#footer
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			width 100%
+			padding-y(10px)
+			.container
+			.row
+				text-align center
+			.tw
+				font-size 32pt
+				color $white
+				nout()
+				transition(0.3s, ease, all)
+				&:hover
+					color $twitterBlue
+				i
+					display inline-block
+		#lab
+			height 100%
+			.ie-fix
+				fz()
+			.f-h
+				fz()
+			.tb
+				fz()
+				display table
+				text-align center
+			.in-tb
+				display table-cell
+				vertical-align middle
+			.wr
+				position relative
+				&.gradient
+					.logo
+						display inline-block
+						background-image url('../img/logo.png')
+						background-repeat no-repeat
+						background-position 100% 100%
+						background-size cover
+						position relative
+						width 255px
+						height 300px
+					.coming-soon
+						font-family 'Sketch Fine Serif'
+						color $white
+						font-size 26pt
+						margin-top 20px
